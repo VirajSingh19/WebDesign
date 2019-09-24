@@ -1,0 +1,12 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#000000",
+    }
+}
