@@ -36,5 +36,88 @@ body {
     */
     background-size: cover;
     background-position: bottom;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%  )
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%  );
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    /* top and left reference are from origin */
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+    /* width will be scaled automatically */
+}
+
+.text-box {
+    position: absolute;
+    top: 30%; /* 50% of the parent element */
+    left: 30%;
+    transform: translate(-50%, -50%); /*translats */
+}
+
+.heading-primary {
+    color:#777;
+    text-transform: uppercase; 
+    position: absolute;
+}
+
+
+.heading-primary-main {
+    /* span element is by default an inline element */
+    display: block;
+    font-size: 60px;    
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-delay: 1s; /*animation plays after 3s*/
+    animation-iteration-count: 2; /* this many times animation happens */
+    animation-timing-function: ease-in ; /*slower at the begining and faster at the end*/
+    
+}
+
+
+.heading-primary-sub {
+     /* span element is by default an inline element */
+     display: block;
+     font-size: 20px;    
+     font-weight: 700;
+     letter-spacing: 17.4px;
+}
+
+/* for browser performance it's best to animate two properties opacity and transform */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80% {
+        opacity: 0.5;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);/* the way it looks default no translate*/
+    }
+
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80% {
+        opacity: 0.5;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);/* the way it looks default no translate*/
+    }
+
 }
