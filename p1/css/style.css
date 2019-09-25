@@ -41,7 +41,7 @@ body {
 }
 
 .logo-box {
-    position: absolute;
+    position: relative;
     /* top and left reference are from origin */
     top: 40px;
     left: 40px;
@@ -57,10 +57,11 @@ body {
     top: 30%; /* 50% of the parent element */
     left: 30%;
     transform: translate(-50%, -50%); /*translats */
+    text-align: center;
 }
 
 .heading-primary {
-    color:#777;
+    color:white;
     text-transform: uppercase; 
     position: absolute;
 }
@@ -121,3 +122,32 @@ body {
     }
 
 }
+/* link sudo class */
+/* link,visited is a special state */
+.btn:link, btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    /* top right bottom left or clockwise */
+    padding: 15px 40px;
+    display: inline-block; 
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+
+btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    /* position: absolute; */
+    background-color:#fff;
+    color: #777;
+    margin-top:70%;
+}
+
